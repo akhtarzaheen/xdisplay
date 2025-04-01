@@ -31,19 +31,17 @@ function App() {
     <>
      <h1>Full Name Display</h1>
     <form onSubmit={handleSubmit}>
-      <span style={{ display: 'flex', alignItems: 'center',gap:"10px",marginBottom:"10px" }}>
-        <span>First Name:</span>
-        <input onChange={handleFirstNameChange} value={firstName} type="text" required/>
-      </span>
-      <span style={{ display: 'flex', alignItems: 'center',gap:"10px",marginBottom:"10px" }}>
-        <span>Last Name:</span>
-        <input onChange={handleLastNameChange} value={lastName} type="text" required/>
-      </span>
+      <p>
+      <label for="firstName">First Name:</label>
+        <input type="text"onChange={handleFirstNameChange} value={firstName} name="firstName" required/>
+        </p>
+        <p>
+        <label for="lastName">Last Name:</label>
+        <input onChange={handleLastNameChange} value={lastName} type="text" name="lastName" required/>
+        </p>
       <button type="submit">Submit</button>
     </form>
-    <div>
        <p>{text}</p>
-    </div>
     </>
   )
 }
