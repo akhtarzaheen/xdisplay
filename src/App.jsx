@@ -24,7 +24,6 @@ function App() {
   return (
     <>
      <h1>Full Name Display</h1>
-     {console.log('text=>',text)}
     <form>
       <div style={{ display: 'flex', alignItems: 'center',gap:"10px" }}>
         <span>First Name:</span>
