@@ -24,16 +24,16 @@ function App() {
   return (
     <>
      <h1>Full Name Display</h1>
-    <form>
-      <div style={{ display: 'flex', alignItems: 'center',gap:"10px" }}>
+    <form onSubmit={handleSubmit}>
+      <div style={{ display: 'flex', alignItems: 'center',gap:"10px",marginBottom:"10px" }}>
         <span>First Name:</span>
-        <input onChange={handleFirstNameChange} type="text" required/>
+        <input onChange={handleFirstNameChange} value={firstName} type="text" required/>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center',gap:"10px" }}>
+      <div style={{ display: 'flex', alignItems: 'center',gap:"10px",marginBottom:"10px" }}>
         <span>Last Name:</span>
-        <input onChange={handleLastNameChange} type="text" required/>
+        <input onChange={handleLastNameChange} value={lastName} type="text" required/>
       </div>
-      <button onClick={handleSubmit}>Submit</button>
+      <button type="submit">Submit</button>
     </form>
     <div>
        <p>{text}</p>
