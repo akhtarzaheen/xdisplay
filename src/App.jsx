@@ -23,14 +23,15 @@ function App() {
   }
 
   const handleSubmit = (e) => {
+    console.log('submit')
     e.preventDefault()
     setText(`Full Name: ${firstName} ${lastName}`)
   }
-
+console.log(firstName.length === 0 || lastName.length === 0)
   return (
     <>
      <h1>Full Name Display</h1>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={firstName.length === 0 || lastName.length === 0 ? null : handleSubmit}>
       <p>
       <label for="firstName">First Name:</label>
         <input type="text"onChange={handleFirstNameChange} value={firstName} name="firstName" required/>
