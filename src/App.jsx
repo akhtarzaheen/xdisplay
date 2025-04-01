@@ -10,10 +10,16 @@ function App() {
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value)
+    if(e.target.value.length === 0){
+      setText('')
+    }
   }
 
   const handleLastNameChange = (e) => {
     setLastName(e.target.value)
+    if(e.target.value.length === 0){
+      setText('')
+    }
   }
 
   const handleSubmit = (e) => {
