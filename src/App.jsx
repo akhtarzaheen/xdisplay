@@ -39,7 +39,7 @@ console.log(firstName.length === 0 || lastName.length === 0)
         <input onChange={handleLastNameChange} value={lastName} type="text" name="lastName" required/>
       <button type="submit">Submit</button>
     </form>
-       <div>{text}</div>
+       <span>{text}</span>
     </>
   )
 }
