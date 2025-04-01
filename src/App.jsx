@@ -23,9 +23,7 @@ function App() {
   }
 
   const handleSubmit = (e) => {
-    console.log('submit')
     e.preventDefault()
-    setText(`Full Name: ${firstName} ${lastName}`)
   }
 console.log(firstName.length === 0 || lastName.length === 0)
   return (
@@ -39,7 +37,7 @@ console.log(firstName.length === 0 || lastName.length === 0)
         <input onChange={handleLastNameChange} value={lastName} type="text" name="lastName" required/>
       <button type="submit">Submit</button>
     </form>
-       <p>{`Full Name: ${firstName} ${lastName}`}</p>
+       <p>{firstName && lastName && `Full Name: ${firstName} ${lastName}`}</p>
     </>
   )
 }
