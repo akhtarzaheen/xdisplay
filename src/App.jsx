@@ -32,14 +32,14 @@ console.log(firstName.length === 0 || lastName.length === 0)
     <>
      <h1>Full Name Display</h1>
     <form onSubmit={firstName.length === 0 || lastName.length === 0 ? null : handleSubmit}>
-      <p>
+      <span style={{display: 'flex',marginBottom: '10px'}}>
       <label for="firstName">First Name:</label>
         <input type="text"onChange={handleFirstNameChange} value={firstName} name="firstName" required/>
-        </p>
-        <p>
+        </span>
+        <span  style={{display: 'flex',marginBottom: '10px'}}>
         <label for="lastName">Last Name:</label>
         <input onChange={handleLastNameChange} value={lastName} type="text" name="lastName" required/>
-        </p>
+        </span>
       <button type="submit">Submit</button>
     </form>
        <p>{text}</p>
