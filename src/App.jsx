@@ -6,24 +6,23 @@ import './App.css'
 function App() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-  const [text, setText] = useState('')
+  const [isShowtext, setIsShowText] = useState(false)
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value)
-    if(e.target.value.length === 0){
-      setText('')
-    }
+      setIsShowText(false);
+    
   }
 
   const handleLastNameChange = (e) => {
     setLastName(e.target.value)
-    if(e.target.value.length === 0){
-      setText('')
-    }
+      setIsShowText(false)
+    
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setIsShowText(true);
   }
 console.log(firstName.length === 0 || lastName.length === 0)
   return (
@@ -37,7 +36,7 @@ console.log(firstName.length === 0 || lastName.length === 0)
         <input onChange={handleLastNameChange} value={lastName} type="text" name="lastName" required/>
       <button type="submit">Submit</button>
     </form>
-       <p>{firstName && lastName && `Full Name: ${firstName} ${lastName}`}</p>
+       <p>{ isShowtext && `Full Name: ${firstName} ${lastName}`}</p>
     </>
   )
 }
