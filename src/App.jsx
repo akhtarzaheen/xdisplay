@@ -38,7 +38,7 @@ function App() {
         </div>
       <button type="submit">Submit</button>
     </form>
-      <h1> { isShowtext && `Full Name: ${firstName} ${lastName}`}</h1>
+     {isShowtext && <h1> { `Full Name: ${firstName} ${lastName}`}</h1>} 
     </>
   )
 }
