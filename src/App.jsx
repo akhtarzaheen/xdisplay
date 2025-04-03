@@ -29,11 +29,13 @@ console.log(firstName.length === 0 || lastName.length === 0)
     <>
      <h1>Full Name Display</h1>
     <form onSubmit={firstName.length === 0 || lastName.length === 0 ? null : handleSubmit}>
-      <label for="firstName">First Name:</label>
+      <div>      <label for="firstName">First Name:</label>
         <input type="text"onChange={handleFirstNameChange} value={firstName} name="firstName" required/>
-    
+        </div>
+<div>
         <label for="lastName">Last Name:</label>
         <input onChange={handleLastNameChange} value={lastName} type="text" name="lastName" required/>
+        </div>
       <button type="submit">Submit</button>
     </form>
       <h1> { isShowtext && `Full Name: ${firstName} ${lastName}!`}</h1>
